@@ -1,0 +1,1 @@
+This folder contains the ML model .ipynb file and the .pkl file
