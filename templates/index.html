@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+{% block head %}
+
+{% endblock%}
+
+{% block body %}
+    <h1>hello</h1>
+    <form method="POST" action="/submit">
+
+    <label for="customRange2" class="form-label">one</label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5" id="customRange2">
+
+    <label for="customRange2" class="form-label">two</label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5"  id="customRange2">
+
+    <label for="customRange2" class="form-label">three</label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5"  id="customRange2">
+
+    <label for="customRange2" class="form-label">four</label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5" id="customRange2">
+
+    <label for="customRange2" class="form-label">five</label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5" id="customRange2">
+
+    <label for="customRange2" class="form-label"> six </label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5" id="customRange2">
+
+    <label for="customRange2" class="form-label">seven </label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5" id="customRange2">
+
+    <label for="customRange2" class="form-label">eight </label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5" id="customRange2">
+
+    <label for="customRange2" class="form-label">nine</label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5"  id="customRange2">
+
+    <label for="customRange2" class="form-label">ten</label>
+    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="5"  id="customRange2">
+
+    <button type="submit" class="btn btn-primary">submit</button>
+    </form>    
+{% endblock%}
