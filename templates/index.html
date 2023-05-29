@@ -1,98 +1,387 @@
 {% extends 'base.html' %}
 
 {% block head %}
-
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 {% endblock%}
 
 {% block body %}
-    <h1>hello</h1>
-    <form method="POST" action="{{ url_for('submit')}}">
-    
-    <div class="mb-3">
-        <label for></label>
-        <input type="text" name="user_emp_id" placeholder="Employee_id" required="required" />
-    </div>
+<div>
+	<table border="2">
+    <form method="POST" action="{{ url_for('submit')}}">    
         
-    <label for="customRange2" class="form-label">one</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4" id="customRange2">
-    
-    <label for="customRange2" class="form-label">two</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4"  id="customRange2">
+		<div class="mb-3">
+			<label for></label>
+			<input type="text" name="user_emp_id" placeholder="Employee_id" required="required" />
+		</div>
+			<tr>
+				<td>QUESTIONS</td>
+				<td>RANGE</td>
+			</tr>
+			<br>
+			<br>
+			<tr><td>
+			<br>
+			<label for="customRange2" class="form-label">In the last month, how often have you been upset because of something that
+			happened unexpectedly?</label></td>
 
-    <label for="customRange2" class="form-label">three</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4"  id="customRange2">
-
-    <label for="customRange2" class="form-label">four</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4" id="customRange2">
-
-    <label for="customRange2" class="form-label">five</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4" id="customRange2">
-
-    <label for="customRange2" class="form-label"> six </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4" id="customRange2">
-
-    <label for="customRange2" class="form-label">seven </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4" id="customRange2">
-
-    <label for="customRange2" class="form-label">eight </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4" id="customRange2">
-
-    <label for="customRange2" class="form-label">nine</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4"  id="customRange2">
-
-    <label for="customRange2" class="form-label">ten</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="4"  id="customRange2">
-
-    <label for="customRange2" class="form-label">AN-one</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-    
-    <label for="customRange2" class="form-label">AN-two</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3"  id="customRange2">
-
-    <label for="customRange2" class="form-label">AN-three</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3"  id="customRange2">
-
-    <label for="customRange2" class="form-label">AN-four</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label">AN-five</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label">AN- six </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label">AN-seven </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-    
-    <label for="customRange2" class="form-label">D_one</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-    
-    <label for="customRange2" class="form-label">D_two</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3"  id="customRange2">
-
-    <label for="customRange2" class="form-label">D_three</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3"  id="customRange2">
-
-    <label for="customRange2" class="form-label">D_four</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label">D_five</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label"> D_six </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label">D_seven </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label">D_eight </label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3" id="customRange2">
-
-    <label for="customRange2" class="form-label">D_nine</label>
-    <input type="range" class="form-range" name="rangeInputs[]" min="0" max="3"  id="customRange2">
-
-    <button type="submit" class="btn btn-primary">submit</button>
-    </form>    
+			<td style="width:350px">
+				<br>
+				<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+				<datalist id="range-labels">
+				  <option>0</option>
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				</datalist>
+			   
+			</td>
+			</tr>
+		<tr>
+			<td>
+		<label for="customRange2" class="form-label">In the last month, how often have you felt that you were unable to control the
+			important things in your life?</label></td>
+			<td>
+				<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+				<datalist id="range-labels">
+				  <option>0</option>
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				</datalist>
+			   
+			  </td>
+			</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">In the last month, how often have you felt nervous and stressed?</label></td>
+		<td>
+			<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">In the last month, how often have you felt confident about your ability to handle your personal problems?</label></td>
+		<td>
+			<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr><td>
+		<label for="customRange2" class="form-label">In the last month, how often have you felt that things were going your way?</label></td>
+		<td>
+			<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label"> In the last month, how often have you found that you could not cope with
+			all the things that you had to do?</label></td>
+			<td>
+				<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+				<datalist id="range-labels">
+				  <option>0</option>
+				  <option>1</option>
+				  <option>2</option>
+				  <option>3</option>
+				  <option>4</option>
+				</datalist>
+			   
+			  </td>
+			</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">In the last month, how often have you been able to control irritations in your life? </label></td>
+		<td>
+			<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">In the last month, how often have you felt that you were on top of things?</label></td>
+		<td>
+			<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label"> In the last month, how often have you been angered because of things that happened that were outside of your control?</label></td>
+		<td><input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">In the last month, how often have you felt difficulties were piling up so high that you could not overcome them?</label></td><td>
+			<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">Feeling nervous, anxious, or on edge</label></td><td>
+			<input type="range" min="0" max="4" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  <option>4</option>
+			</datalist>
+		   
+		  </td>
+		</tr>
+		<tr>
+			<td>
+		<label for="customRange2" class="form-label">Not being able to stop or control worrying</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">Worrying too much about different things</label></td>
+		<td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">Trouble relaxing</label></td>
+		<td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">Being so restless that it is hard to sit still</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr><td>
+		<label for="customRange2" class="form-label">Becoming easily annoyed or irritable</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr><td>
+		<label for="customRange2" class="form-label">Feeling afraid, as if something awful might happen</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+		<tr>
+			<td>
+		<label for="customRange2" class="form-label">Little interest or pleasure in doing things</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+		<tr><td>
+		<label for="customRange2" class="form-label">Feeling down, depressed or hopeless</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">Trouble falling asleep, staying asleep, or sleeping too much</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr><td>
+		<label for="customRange2" class="form-label">Feeling tired or having little energy</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr><td>
+		<label for="customRange2" class="form-label">Poor appetite or overeating</label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label"> Feeling bad about yourself - or that you're a failure or have let yourself or your family down </label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">Trouble concentrating on things, such as reading the newspaper or watching television </label></td><td>
+			<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+			<datalist id="range-labels">
+			  <option>0</option>
+			  <option>1</option>
+			  <option>2</option>
+			  <option>3</option>
+			  
+			</datalist>
+		   
+		  </td>
+		</tr>
+	<tr>
+		<td>
+		<label for="customRange2" class="form-label">Moving or speaking so slowly that other people could have noticed. Or, the opposite - being so fidgety or restless that you have been moving around a lot more than usual</label></td><td>
+		<input type="range" min="0" max="3" step="1" value="0" id="customRange" list="tickmarks" list="range-labels">
+		<datalist id="range-labels">
+			<option>0</option>
+			<option>1</option>
+			<option>2</option>
+			<option>3</option>
+			  
+		</datalist>
+		</td>
+		
+		</form>  
+		
+	</table>
+	<button type="submit" class="btn btn-primary">submit</button>
+</div>   
     <br>
     <br>
     {{prediction_text }}
